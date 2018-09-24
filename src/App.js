@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import data from './data/data';
+import Card from './Card';
 
 import './App.css';
 
@@ -38,6 +39,8 @@ class App extends Component {
           onClick={() => this.nextProperty()}
           disabled={property.index === data.properties.length-1}
         > NEXT </button>
+
+        <Card property={property}/>
       </div>
     );
   }
