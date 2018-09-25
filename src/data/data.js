@@ -1,8 +1,8 @@
 const data = {
     "properties": [
-        {
+        {   
             "index": 0,
-            "name": "Tefa"
+            "name": "Tefa 🌹"
         },
         {
             "index": 1,

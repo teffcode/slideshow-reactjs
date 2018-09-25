@@ -27,10 +27,9 @@ class App extends Component {
 
   render() {
     const { properties, property } = this.state;
-    console.log(data.properties.length)
 
     return (
-      <div>
+      <div className="App">
         <button 
           onClick={() => this.prevProperty()}
           disabled={property.index === 0}
@@ -39,8 +38,17 @@ class App extends Component {
           onClick={() => this.nextProperty()}
           disabled={property.index === data.properties.length-1}
         > NEXT </button>
-
-        <Card property={property}/>
+        <div className={`cards-slider active-slide-${property.index}`}>
+          <div 
+            className="cards-slider-wrapper"
+            style={{
+              'transform': `translateX(-${property.index*(100/properties.length)}%)`
+            }}>
+            {
+              properties.map( property => <Card  key={property.index}  property={property}/> )
+            }
+          </div>
+        </div>
       </div>
     );
   }

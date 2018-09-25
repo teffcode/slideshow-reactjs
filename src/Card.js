@@ -4,9 +4,9 @@ import './App.css';
 
 const Card = ({ property }) => {
     const { index, name } = property;
-    
+
     return (
-        <div className="card">
+        <div id={`card-${index}`} className="card">
             <p>name: { name }</p>
         </div>
     );

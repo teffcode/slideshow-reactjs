@@ -1,12 +1,69 @@
 .App {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .card {
   background-color: papayawhip;
   border: 2px solid #333;
-  height: 200px;
-  width: 200px;
+  flex: 1;
+  height: 300px;
+  margin: 10px;
+  min-width: 500px;
+  transform: scale(0.8);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+}
+
+.cards-slider {
+  position: relative;
+  left: -250px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.cards-slider:after {
+  content: '';
+  display: block;
+  height: 304px;
+  left: 0px;
+  margin: 10px;
+  outline: 5px solid aqua;
+  position: absolute;
+  top: 0;
+  width: 504px;
+}
+
+.cards-slider.active-slide-0 #card-0 {
+  opacity: 1;
+  transform: scale(1);
+  opacity: 1; 
+}
+
+.cards-slider.active-slide-1 #card-1 {
+  opacity: 1;
+  transform: scale(1);
+  opacity: 1; 
+}
+
+.cards-slider.active-slide-2 #card-2 {
+  opacity: 1;
+  transform: scale(1);
+  opacity: 1; 
+}
+
+.cards-slider-wrapper {
+  display: flex;
+  position: absolute;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+}
+
+button {
+  height: 30px;
+  width: 100px;
 }
 
 p {
